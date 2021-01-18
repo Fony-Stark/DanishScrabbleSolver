@@ -12,7 +12,7 @@ print("This is your letters:", val)
 def bruteforce(string, solution):
     S = list(string)
     for i in range(len(S)+1):
-      for c in itertools.combinations(S, i):
+      for c in itertools.permutations(S, i):
         cc = ''.join(c)
         if(check_for_word(cc)):
             solution[cc] = calc_value(cc)
